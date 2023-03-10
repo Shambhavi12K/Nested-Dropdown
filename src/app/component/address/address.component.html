@@ -1,0 +1,44 @@
+<form class="container">
+  <mat-card class="center">
+    <mat-card-header>
+      <mat-card-title>
+        Form for updating address
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div>
+          <mat-form-field>
+            <mat-label>Select Country</mat-label>
+            <mat-select (valueChange)="selectCountry(country.value)" #country>
+              <mat-option *ngFor="let country of firstLevelArr" value="{{country.id}}">{{country.name}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div *ngIf="showState">
+          <mat-form-field>
+            <mat-label>Select State</mat-label>
+            <mat-select  (valueChange)="selectState(st.value)" #st>
+              <mat-option *ngFor="let state of state" [value]="state.id">{{state.name}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div *ngIf="showDistrict">
+          <mat-form-field>
+            <mat-label>Select District</mat-label>
+            <mat-select  (valueChange)="selectDistrict(dis.value)" #dis>
+              <mat-option *ngFor="let district of district" value="{{district.id}}">{{district.name}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div *ngIf="showPlace">
+          <mat-form-field>
+            <mat-label>Select Place</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let place of place" value="{{place.id}}">{{place.name}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        
+    </mat-card-content>
+  </mat-card>
+</form>

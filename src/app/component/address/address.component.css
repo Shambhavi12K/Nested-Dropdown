@@ -1,0 +1,18 @@
+.container{
+    background-image: url(https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=600);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+.center {
+   align-items: center;
+    margin:auto;
+    max-width:50%;
+    border-radius: 5px;
+    padding:10px;
+    height:50vh;
+    background-color:transparent;
+}
